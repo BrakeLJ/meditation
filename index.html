@@ -9,6 +9,13 @@
   </head>
   <body>
     <div class="app">
+      <!-- default video loop  -->
+      <div class="video-container">
+        <video loop>
+          <source type="video/mp4" src="./video/rain.mp4" />
+        </video>
+      </div>
+
       <!-- Select amount of time buttons  -->
       <div class="time-select">
         <!-- Data attr amount of time in seconds  -->
@@ -57,8 +64,17 @@
             stroke-width="20"
           />
         </svg>
+        <h3 class="time-display">0:00</h3>
       </div>
-      <div class="sound-picker"></div>
+
+      <div class="sound-picker">
+        <button data-sound="./audio/rain.mp3" data-video="./video/rain.mp4">
+          <img src="./svg/rain.svg" alt="rain" />
+        </button>
+        <button data-sound="./audio/beach.mp3" data-video="./video/beach.mp4">
+          <img src="./svg/beach.svg" alt="beach" />
+        </button>
+      </div>
     </div>
 
     <script src="./app.js"></script>
